@@ -1,23 +1,31 @@
-# Lua Smart – FHE-based Smart Contract Framework 🔐
+# 🗳️ Lua Smart – Private Voting Example with FHE (Simulated)
 
-**Lua Smart** is a privacy-first smart contract framework powered by Fully Homomorphic Encryption (FHE). It allows developers to run computations directly on encrypted data — enabling confidential DeFi, voting, auctions, healthcare applications, and more.
+This project is a demo of privacy-preserving voting using a simplified form of Fully Homomorphic Encryption (FHE). It simulates encrypted votes on-chain and decrypts them off-chain using a simple SDK.
 
----
+## 🧩 Features
 
-## 🌟 Key Components
+- Solidity smart contract to store encrypted votes
+- TypeScript SDK for (fake) encryption/decryption
+- Hardhat script and test file for demonstration
 
-- `contracts/`: Smart contracts with embedded FHE logic (Solidity & Rust)
-- `fhe-vm/`: Lua Smart's minimal FHE Virtual Machine for encrypted execution
-- `sdk/`: Developer tools for data encryption, interaction, and simulation
-- `examples/`: Sample apps like private voting and encrypted auctions
-- `docs/`: Architecture, FHE background, and integration guides
-
----
-
-## 📦 Quick Start
+## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/luasmart/fhe-contracts.git
-cd fhe-contracts
+git clone https://github.com/YOUR_USERNAME/lua-smart-vote.git
+cd lua-smart-vote
 npm install
-npm run dev
+npx hardhat compile
+npx hardhat test
+npx hardhat run scripts/vote.ts
+```
+
+## 📂 Project Structure
+
+- `contracts/PrivateVoting.sol`: Core smart contract
+- `sdk/`: Encryption/decryption helpers
+- `scripts/vote.ts`: Submit an encrypted vote
+- `test/voting.test.ts`: Full test case with decrypt
+
+---
+
+🔐 *Note: FHE logic is simulated for demo purposes. This repo is intended for educational use only.*
